@@ -12,4 +12,6 @@ $json = file_get_contents('php://input');
 
 $data = json_decode($json);
 
-echo json_encode($data->dt);
+$sortOrder=[1,2,3,4];
+
+echo json_encode($sortOrder);
