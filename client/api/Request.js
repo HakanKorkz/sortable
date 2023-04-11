@@ -1,4 +1,4 @@
-const request = async (data, href, method) => {
+const request = async (href,data, method) => {
     try {
         const options = {
             method,
@@ -16,4 +16,4 @@ const request = async (data, href, method) => {
     }
 }
 
-export const post = async (data, hef) => await request(data, hef, "POST")
+export const post = async (href,data=null) => await request(href,data, "POST")

@@ -216,9 +216,15 @@ li {
     border-top: 1px solid #ccc;
     scroll-snap-align: start;
 }
+li:hover {
+    border-top: 1px solid #767676;
+    background: #bebebe;
+}
 
 li:first-child {
     border: 0;
+    border-bottom:  1px solid #ccc;
+
 }
 
 .element-text {

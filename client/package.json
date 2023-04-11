@@ -12,8 +12,8 @@
     "vite": "^4.2.0"
   },
   "dependencies": {
+    "install": "^0.13.0",
     "normalize.css": "^8.0.1",
-    "sortable": "^2.0.0",
     "sortablejs": "^1.15.0"
   }
 }

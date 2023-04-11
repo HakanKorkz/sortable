@@ -1,14 +1,14 @@
 import "normalize.css"
-import {post} from "./api/Request.js";
-import Sortable from 'sortable';
+import sortable from "./module/Sortable.js";
 
-const lists=document.getElementById("lists")
+sortable()
 
 
-const data= {
-    "dt":"abc"
-}
 
-// const data=new FormData()
-// data.append("dt","abc")
-post(JSON.stringify(data), "index.php").then(response=>response)
+
+// const data= {
+//     "dt":"abc"
+// }
+//  const data=new FormData()
+//  data.append("dt","abc")
+// post(JSON.stringify(data), "index.php").then(response=>response)
