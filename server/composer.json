@@ -1,0 +1,17 @@
+{
+    "name": "korkz/server",
+    "autoload": {
+        "psr-4": {
+            "Korkz\\Server\\App\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hakan",
+            "email": "hakan.hizmet.54.gs@gmail.com"
+        }
+    ],
+    "require": {
+        "PHP": "8.1.*"
+    }
+}

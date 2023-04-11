@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --container-height: 400px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #EBEBEB;
+    position: relative;
+}
+
+.container-from {
+    position: absolute;
+    width: 90%; /* or any other value you prefer */
+    top: 10%; /* or any other value you prefer */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container {
+    position: absolute;
+    width: 90%; /* or any other value you prefer */
+    top: 30%; /* or any other value you prefer */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+@media screen and (max-width: 900px) {
+    .container-from {
+        width: 80%;
+        left: 50%;
+        top: 0;
+    }
+
+    .container {
+        position: absolute;
+        width: 80%; /* or any other value you prefer */
+        top: 30%; /* or any other value you prefer */
+        left: 50%;
+    }
+
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=url],
+    input[type=time],
+    input[type=date],
+    input[type=datetime-local],
+    input[type=tel],
+    input[type=number],
+    textarea.materialize-textarea {
+        height: 2rem;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+}
+
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=time]:focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+textarea.materialize-textarea:focus {
+    border-bottom: 2px solid #EBEBEB;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition: 500ms border-bottom-color;
+}
+
+input[type=text].valid,
+input[type=password].valid,
+input[type=email].valid,
+input[type=url].valid,
+input[type=time].valid,
+input[type=date].valid,
+input[type=datetime-local].valid,
+input[type=tel].valid,
+input[type=number].valid,
+textarea.materialize-textarea.valid {
+    border-bottom: 1px solid #4caf50;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+input[type=text].invalid,
+input[type=password].invalid,
+input[type=email].invalid,
+input[type=url].invalid,
+input[type=time].invalid,
+input[type=date].invalid,
+input[type=datetime-local].invalid,
+input[type=tel].invalid,
+input[type=number].invalid,
+textarea.materialize-textarea.invalid {
+    border-bottom: 1px solid #f44336;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ui.green.basic.button,
+.ui.green.basic.buttons .button {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.94);
+    text-shadow: none;
+    background-image: none;
+    -webkit-box-shadow: none;
+    padding: 10px;
+    width: 100%;
+    box-shadow: none;
+    border: 2px solid #EBEBEB;
+    border-radius: 0.28571429rem;
+    -webkit-transition: background-color 0.1s ease;
+    transition: background-color 0.1s ease;
+    margin-top: 2%;
+}
+
+.ui.green.basic.button:hover,
+.ui.green.basic.buttons .button:hover {
+    background-color: #EBEBEB;
+    color: rgba(0, 0, 0, 0.94);
+    text-shadow: none;
+    background-image: none;
+}
+
+.ui.green.basic.button:focus,
+.ui.green.basic.buttons .button:focus {
+    background-color: #979797;
+    color: rgb(220, 220, 220);
+    text-shadow: none;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ui.green.basic.active.button,
+.ui.green.basic.buttons .active.button {
+    background-color: #979797;
+    color: rgba(220, 220, 220, 0.8);
+    text-shadow: none;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+
+.list {
+    max-height: var(--container-height);
+    scroll-snap-type: y mandatory;
+    overscroll-behavior-y: contain;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-timeline: listTimeline vertical;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    scroll-snap-align: start;
+}
+
+li:first-child {
+    border: 0;
+}
+
+.element-text {
+    width: 100%;
+}
+
+.element-actions {
+    flex: auto;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 20px;
+
+}
+.element-actions > input {
+    width: 20%;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.element-actions > .icon-solid {
+    width: 32px;
+    height: 32px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}.element-actions > .icon-solid:active {
+       cursor: grabbing;
+}
+
+/* Demo styles */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 144, 0.5);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(229, 229, 229, 0.5);
+}
