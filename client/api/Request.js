@@ -16,4 +16,6 @@ const request = async (href,data, method) => {
     }
 }
 
-export const post = async (href,data=null) => await request(href,data, "POST")
+export const post = async (href,data=null) => await request(`${href}.php`,data, "POST")
+
+export const get=async (href) => await request(href,null,"GET")
