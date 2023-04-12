@@ -7,9 +7,9 @@ use PDOException;
 class DbConnection {
     private PDO|null $conn;
     private string $host = 'localhost';
-    private string $user = 'username';
-    private string $pass = 'password';
-    private string $dbname = 'database_name';
+    private string $user = 'root';
+    private string $pass = '';
+    private string $dbname = 'sortabledb';
 
     public function __construct() {
         try {
