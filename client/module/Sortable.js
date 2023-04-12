@@ -6,7 +6,7 @@ const lists = document.getElementById("lists")
 const sortable = ()=> Sortable.create(lists, {
     handle: '.icon-solid',
     sort: true,
-    group: "localStorage-example",
+    group: "local-sorts",
     store: {
         /**
          * Get the order of elements. Called once during initialization.
