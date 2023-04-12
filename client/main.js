@@ -1,7 +1,11 @@
 import "normalize.css"
 import sortable from "./module/Sortable.js";
+import categories from "./module/Categories.js";
+import {post} from "./api/Request.js";
 
-sortable()
+categories()
+
+//sortable()
 
 
 
@@ -9,6 +13,5 @@ sortable()
 // const data= {
 //     "dt":"abc"
 // }
-//  const data=new FormData()
-//  data.append("dt","abc")
-// post(JSON.stringify(data), "index.php").then(response=>response)
+//
+// post("index.php",JSON.stringify(data)).then(response=>response)
