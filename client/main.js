@@ -1,15 +1,22 @@
 import "normalize.css"
 import categories from "./module/Categories.js";
-import {get, post} from "./api/Request.js";
+import {get, post, postJson} from "./api/Request.js";
 
 categories()
 
 //sortable()
 
 
-const data= {
+
+
+
+const dataForm=new FormData();
+dataForm.append("user",8)
+post("", dataForm).then(response => response)
+
+const dataJson= {
     "dt":"abc"
 }
-
-post("App/Index", JSON.stringify(data)).then(response => response)
-get("api/index").then(response => response)
+postJson("", dataJson).then(response => response)
+// get("").then(response => response)
+get("profile").then(response => response)
